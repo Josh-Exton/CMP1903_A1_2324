@@ -16,7 +16,7 @@ namespace CMP1903_A1_2324
          */
 
         //Methods
-                Die dice1 = new Die();
+        Die dice1 = new Die();
         Die dice2 = new Die();
         Die dice3 = new Die();
 
