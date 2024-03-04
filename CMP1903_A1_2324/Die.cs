@@ -17,7 +17,26 @@ namespace CMP1903_A1_2324
 
 
         //Method
+        
+        Random rand;
+        private int _num;
+        public Die()
+        { 
+            rand = new Random();
+            _num = Roll();
+        }
 
+        public int Num // Property
+        {
+            get { return _num; } // Get method
+            set { _num = value; } // Set method
+        }
+
+        public int Roll()
+        { 
+            int num = rand.Next(1,7);
+            return num;
+        }
 
     }
 }
