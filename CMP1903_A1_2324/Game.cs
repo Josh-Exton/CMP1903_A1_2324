@@ -16,6 +16,43 @@ namespace CMP1903_A1_2324
          */
 
         //Methods
+                Die dice1 = new Die();
+        Die dice2 = new Die();
+        Die dice3 = new Die();
+
+        int rolledNumber1;
+        int rolledNumber2;
+        int rolledNumber3;
+
+        public int RolledNumber1
+        {
+            get { return rolledNumber1; }
+            set { rolledNumber1 = value; }
+        }
+        public int RolledNumber2
+        {
+            get { return rolledNumber2; }
+            set { rolledNumber2 = value; }
+        }
+        public int RolledNumber3
+        {
+            get { return rolledNumber3; }
+            set { rolledNumber3 = value; }
+        }
+
+        //Methods
+        public int Play()
+        {
+            rolledNumber1 = dice1.Roll();
+            Console.WriteLine($"You rolled a {rolledNumber1}");
+            rolledNumber2 = dice2.Roll();
+            Console.WriteLine($"You rolled a {rolledNumber2}");
+            rolledNumber3 = dice3.Roll();
+            Console.WriteLine($"You rolled a {rolledNumber3}");
+            int totalNumber = rolledNumber1 + rolledNumber2 + rolledNumber3;
+            Console.WriteLine($"The total of your rolls are {totalNumber}");
+            return totalNumber;
+        }
 
     }
 }
