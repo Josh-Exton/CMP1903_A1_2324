@@ -16,5 +16,27 @@ namespace CMP1903_A1_2324
          */
 
         //Method
+        Die dice = new Die();
+        Game game = new Game();
+
+        public void DieCheck()
+        { 
+            int roll = dice.Roll();
+            Debug.Assert(roll > 0 & roll < 7);
+        }
+
+        public void GameCheck()
+        {
+            int suspectedTotal = game.Play();
+            int num1 = game.RolledNumber1;
+            Console.WriteLine(num1);
+            int num2 = game.RolledNumber2;
+            Console.WriteLine(num2);
+            int num3 = game.RolledNumber3;
+            Console.WriteLine(num3);
+            int total = num1 + num2 + num3;
+            Console.WriteLine($"testing {total}");
+            Debug.Assert(suspectedTotal == total);
+        }
     }
 }
