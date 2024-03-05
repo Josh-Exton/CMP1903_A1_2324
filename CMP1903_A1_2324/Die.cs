@@ -1,37 +1,43 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace CMP1903_A1_2324
 {
     internal class Die
     {
-        /*
-         * The Die class should contain one property to hold the current die value,
-         * and one method that rolls the die, returns and integer and takes no parameters.
-         */
-        
+        // Creating the random field
         Random rand;
+        // Creating the number field
         private int _num;
+
+        /// <summary>
+        /// The number properity which will be between 1 and 6
+        /// </summary>
+        public int Num
+        {
+            get { return _num; }
+            set { _num = value; }
+        }
+
+        /// <summary>
+        /// Constructer which will initize random and set the number field
+        /// </summary>
         public Die()
-        { 
+        {
+            // initizling the random 
             rand = new Random();
             _num = Roll();
         }
 
-        public int Num // Property
-        {
-            get { return _num; } // Get method
-            set { _num = value; } // Set method
-        }
-
+        /// <summary>
+        /// Gets a value 1 to 6 
+        /// </summary>
+        /// <returns>A value from 1 to 6</returns>
         public int Roll()
         {
             // Need the program to wait otherwise it returns the same value
             Thread.Sleep(5);
+            // Asaigns a random number between 1 and 6
             int num = rand.Next(1,7);
             return num;
         }
