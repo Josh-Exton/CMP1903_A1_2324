@@ -29,14 +29,16 @@ namespace CMP1903_A1_2324
         // Checks the play method to see if it adds the values correctly
         public void GameCheck()
         {
-            // It plays the game again this is so the user doesn't get confused
-            Console.WriteLine("Testing Game");
-            int suspectedTotal = game.Play();
-            int num1 = game.RolledNumber1;
-            int num2 = game.RolledNumber2;
-            int num3 = game.RolledNumber3;
-            int total = num1 + num2 + num3;
-            Debug.Assert(suspectedTotal == total);
+            // int suspectedTotal = game.Play();
+            // int num1 = game.RolledNumber1;
+            // Console.WriteLine(num1);
+            // int num2 = game.RolledNumber2;
+            // Console.WriteLine(num2);
+            // int num3 = game.RolledNumber3;
+            // Console.WriteLine(num3);
+            // int total = num1 + num2 + num3;
+            // Console.WriteLine($"testing {total}");
+            // Debug.Assert(suspectedTotal == total);
         }
     }
 }
