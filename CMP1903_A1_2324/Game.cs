@@ -15,7 +15,7 @@ namespace CMP1903_A1_2324
          * rolls could be continous, and the totals and other statistics could be summarised for example.
          */
 
-        //Methods
+        // Creating the dice objects
         Die dice1 = new Die();
         Die dice2 = new Die();
         Die dice3 = new Die();

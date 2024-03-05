@@ -19,15 +19,21 @@ namespace CMP1903_A1_2324
             while (!done) 
             { 
                 game.Play();
-                Console.WriteLine("Do you want to play again");
+                Console.WriteLine("Type yes if you want to play again");
                 String playAgain = Console.ReadLine();
+                // Two methods to help against type errors but doesn't prevent them
+                // Gets rid of any white spaces before and after the word
                 playAgain = playAgain.Trim();
+                // Makes the word all lowercase
                 playAgain = playAgain.ToLower();
+                // Checking if he wants to play again by typing yes
                 if (playAgain != "yes")
                 { 
+                    // Ending the while loop
                     done = true;
                 }
             }
+            // Finished the loop and displays the message to say that the game is completed
             Console.WriteLine("Thanks for Playing");
             Testing test = new Testing();
             test.DieCheck();
