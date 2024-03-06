@@ -2,9 +2,10 @@ code review from Harry Paul
 
 Have the requirements been met?
 
-At the time of writing testing functionality was commented out and thus wasn't functional
 
 The main program rolls 3 dice and sums the total, however the brief states that the additional rolls should be part of the game class not the program class
+
+testing checks the sum and that individual rolls are between 1 and 6 (inclusive
 
 Does the code follow the style guide?
 
@@ -15,7 +16,7 @@ Is the code easy to read?
 code is thoroughly commented and easy to read
 
 Are different errors handled correctlty?
-yes i guess
+The program doesn't crash unexpectedly.
 
 
 
