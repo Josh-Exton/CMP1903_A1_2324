@@ -1,0 +1,32 @@
+code review from Harry Paul
+
+Have the requirements been met?
+
+At the time of writing testing functionality was commented out and thus wasn't functional
+
+The main program rolls 3 dice and sums the total, however the brief states that the additional rolls should be part of the game class not the program class
+
+Does the code follow the style guide?
+
+code follows the style guide with methods and variables being in the appropriate cases
+
+Is the code easy to read?
+
+code is thoroughly commented and easy to read
+
+Are different errors handled correctlty?
+yes i guess
+
+
+
+additional notes:
+I don't understand the purpose of the rolledNumber variables, why not use the public Num value of the die class directly?
+
+If you make the random object static you don't need to force a pause into your program. i just put "private static readonly Random randomNumber = new Random();" at the top of my die class and that worked.
+
+instead of instantiating the die class everytime the play function is called to reroll the die, use the roll function
+
+
+
+
+
