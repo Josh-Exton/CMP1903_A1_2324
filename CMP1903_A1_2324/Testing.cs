@@ -18,13 +18,6 @@ namespace CMP1903_A1_2324
             int roll = dice.Num;
             // Cehcking if it is between 1 and 6
             Debug.Assert(roll > 0 & roll < 7);
-            // <black-eye-inc> Review:
-            // Rather than "(roll > 0 & roll < 7)", I'd recommend "roll > 0 && roll < 7" as "&&" is
-            // more accepted as the standard symbols for the C# AND operator.
-
-            // I personally like to add a lot of "Console.WriteLine(...)" comments in my testing
-            // code so that it is very clear what worked and what didn't.
-            // </black-eye-inc>
         }
 
         /// <summary>
@@ -44,10 +37,6 @@ namespace CMP1903_A1_2324
             int total = num1 + num2 + num3;
             // Comparing the total to the suspected total
             Debug.Assert(suspectedTotal == total);
-            // <black-eye-inc>
-            // That's a great job, but the "Additional information" mark criteria, you also need to
-            // make a Debug.Assert to make sure all outputs are within 3 to 18 range.
-            // </black-eye-inc>
         }
     }
 }
