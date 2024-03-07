@@ -8,6 +8,11 @@ namespace CMP1903_A1_2324
         int rolledNumber1;
         int rolledNumber2;
         int rolledNumber3;
+        // <black-eye-inc>
+        // Are these parameters supposed to be public or private?
+        // The Object-Oriented Principle of "encapsulation" normally wants all parameters in a
+        // class to be private.
+        // </black-eye-inc>
 
         /// <summary>
         /// Properity for storing the 1st rolled value
@@ -35,6 +40,11 @@ namespace CMP1903_A1_2324
             get { return rolledNumber3; }
             set { rolledNumber3 = value; }
         }
+        // <black-eye-inc> Review:
+        // the methods "RolledNumber1", "RolledNumber2" and "RolledNumber3" all return an intager,
+        // meaning the XML Documentation demands a "<returns>" tag written after their "<summary>"
+        // to explain what the methods return.
+        // </black-eye-inc>
 
         /// <summary>
         /// Create 3 dice objects then get the values and add them together
