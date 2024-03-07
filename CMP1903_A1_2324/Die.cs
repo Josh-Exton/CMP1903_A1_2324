@@ -35,8 +35,12 @@ namespace CMP1903_A1_2324
         {
             // Asaigns a random number between 1 and 6
             int num = rand.Next(1,7);
+                        // Making sure it is between 1 and 6
+            while (num < 1 || num > 7)
+            {
+                num = rand.Next(1, 7);
+            }
             return num;
         }
-
     }
 }
