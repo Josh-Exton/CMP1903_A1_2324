@@ -19,10 +19,6 @@ namespace CMP1903_A1_2324
                 game.Play();
                 // Asking user to play again
                 Console.WriteLine("Type \"yes\" if you want to play again");
-                // <black-eye-inc> Review:
-                // I personally would put "yes" in quotation marks so it is more clear to the user
-                // on exactly what you want them to input
-                // </black-eye-inc>
                 String playAgain = Console.ReadLine();
                 // Two methods to help against type errors but doesn't prevent them
                 // Gets rid of any white spaces before and after the word
@@ -37,10 +33,6 @@ namespace CMP1903_A1_2324
                 }
                 Console.WriteLine("");
             }
-            // <black-eye-inc>
-            // I thought the EXTRA Functionality "Continuous Roll function" was supposed to be a
-            // method within the Game class.
-            // </black-eye-inc>
             // Finished the loop and displays the message to say that the game is completed 
             Console.WriteLine("Thanks for Playing");
             // // Seperating the games and the testing in the termial
