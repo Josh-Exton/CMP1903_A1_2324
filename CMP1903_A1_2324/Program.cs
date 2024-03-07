@@ -60,7 +60,7 @@ namespace CMP1903_A1_2324
             // Checking the methods in each class
             test.DieCheck();
             test.GameCheck();
-            Console.ReadLine();//CHANGED FROM "Console.ReadKey();" to "Console.ReadLine();" -- RESET once done reviewing code!
+            Console.Console.ReadKey();
         }
     }
 }
