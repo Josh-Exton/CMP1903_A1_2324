@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Threading;
 
 namespace CMP1903_A1_2324
 {
     internal class Die
     {
         // Creating the random field
-        Random rand;
+        private static readonly Random rand = new Random();
         // Creating the number field
         private int _num;
 
@@ -25,7 +24,6 @@ namespace CMP1903_A1_2324
         public Die()
         {
             // initizling the random 
-            rand = new Random();
             _num = Roll();
         }
 
@@ -35,8 +33,6 @@ namespace CMP1903_A1_2324
         /// <returns>A value from 1 to 6</returns>
         public int Roll()
         {
-            // Need the program to wait otherwise it returns the same value
-            Thread.Sleep(5);
             // Asaigns a random number between 1 and 6
             int num = rand.Next(1,7);
             return num;

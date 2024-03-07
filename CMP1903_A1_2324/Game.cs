@@ -4,10 +4,17 @@ namespace CMP1903_A1_2324
 {
     internal class Game
     {
-        // initializing the rolled numbers so I can make the property
-        int rolledNumber1;
-        int rolledNumber2;
-        int rolledNumber3;
+        // Creating the dice objects 
+        Die dice1 = new Die();
+        Die dice2 = new Die();
+        Die dice3 = new Die();
+
+        // initializing the rolled numbers fields so I can make the property
+        private int rolledNumber1;
+        private int rolledNumber2;
+        private int rolledNumber3;
+
+        // Setting them as properties so I can access them in the testing class
 
         /// <summary>
         /// Properity for storing the 1st rolled value
@@ -42,16 +49,12 @@ namespace CMP1903_A1_2324
         /// <returns>The total of the rolls</returns>
         public int Play()
         {
-            // Creating the dice objects in the method because if I don't the propery will stay the same and the continues roll won't work properly
-            Die dice1 = new Die();
             // Getting the rolled number by accessing the property
-            rolledNumber1 = dice1.Num;
+            rolledNumber1 = dice1.Roll();
             Console.WriteLine($"You rolled a {rolledNumber1}");
-            Die dice2 = new Die();
-            rolledNumber2 = dice2.Num;
+            rolledNumber2 = dice2.Roll();
             Console.WriteLine($"You rolled a {rolledNumber2}");
-            Die dice3 = new Die();
-            rolledNumber3 = dice3.Num;
+            rolledNumber3 = dice3.Roll();
             Console.WriteLine($"You rolled a {rolledNumber3}");
             // Getting the total
             int totalNumber = rolledNumber1 + rolledNumber2 + rolledNumber3;
@@ -60,5 +63,46 @@ namespace CMP1903_A1_2324
             return totalNumber;
         }
 
+
+        /// <summary>
+        /// This mehod calls the Play method in a while loop until the user ends it
+        /// </summary>
+        public void PlayContinuous()
+        {
+            // Setting a done variable to False so I can end the while loop by setting it to true
+            bool done = false;
+            while (done == false)
+            {
+                // Playing the game by calling the method
+                Play();
+                // adding another while loop
+                bool yesOrNo = false;
+                while (!yesOrNo)
+                {
+                    // Asking user to play again
+                    Console.WriteLine("Type \"yes\" if you want to play again and \"no\" if you don't");
+                    string playAgain = Console.ReadLine();
+                    // Two methods to help against type errors but doesn't prevent them
+                    // Gets rid of any white spaces before and after the word
+                    playAgain = playAgain.Trim();
+                    // Makes the word all lowercase
+                    playAgain.ToLower();
+                    if (playAgain == "yes" || playAgain == "no")
+                    {
+                        // Ending the second loop
+                        yesOrNo = true;
+                    }
+
+                    if (playAgain == "no")
+                    {
+                        // Ending the first loop
+                        done = true;
+                    }
+                }
+                // Two methods to help against type errors but doesn't prevent them
+                // Seperating the games in the terminal
+                Console.WriteLine("");
+            }
+        }
     }
 }

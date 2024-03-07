@@ -17,7 +17,7 @@ namespace CMP1903_A1_2324
             // Getting the value from the property
             int roll = dice.Num;
             // Cehcking if it is between 1 and 6
-            Debug.Assert(roll > 0 & roll < 7);
+            Debug.Assert(roll > 0 && roll < 7);
         }
 
         /// <summary>
@@ -35,6 +35,8 @@ namespace CMP1903_A1_2324
             int num3 = game.RolledNumber3;
             // Calculating the total
             int total = num1 + num2 + num3;
+            // Checking if total is in range
+            Debug.Assert(total > 2 && total < 19);
             // Comparing the total to the suspected total
             Debug.Assert(suspectedTotal == total);
         }
