@@ -35,16 +35,6 @@ namespace CMP1903_A1_2324
                     // Ending the while loop
                     done = true;
                 }
-                // <black-eye-inc> Review:
-                // I personally would force the user to respond again and again until they give a
-                // valid responce and using a wider array of valid potential answers ("yes"/"y" or
-                // "no"/"n").
-                // So there's plenty of room you could expand this method (potentially by doing
-                // what I did and putting it in its own function with exception handling to show
-                // off the 'exhaustive exception handing'... although that isn't an OOP principle,
-                // so I don't know how many marks it's worth).
-                // </black-eye-inc>
-                // Seperating the games in the termial
                 Console.WriteLine("");
             }
             // <black-eye-inc>
@@ -60,7 +50,7 @@ namespace CMP1903_A1_2324
             // Checking the methods in each class
             test.DieCheck();
             test.GameCheck();
-            Console.ReadLine();//CHANGED FROM "Console.ReadKey();" to "Console.ReadLine();" -- RESET once done reviewing code!
+            Console.ReadKey();
         }
     }
 }
